@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New econom</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/econom}" th:object="${econom}">
+    <label for="vin">Введите vin: </label>
+    <input type="text" th:field="*{vin}" id="vin"/>
+    <div style="color:red" th:if="${#fields.hasErrors('vin')}" th:errors="*{vin}">Vin Error</div>
+    <br/>
+    <label for="brand">Введите модель: </label>
+    <input type="text" th:field="*{brand}" id="brand"/>
+    <div style="color:red" th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}">Brand Error</div>
+    <br/>
+    <input type="submit" value="Добавить"/>
+</form>
+
+</body>
+</html>

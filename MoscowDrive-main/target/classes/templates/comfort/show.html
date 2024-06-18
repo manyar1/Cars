@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+<p th:text="${'Vin: ' + comfort.getVin()}">VALUE</p>
+<p th:text="${'Brand: ' + comfort.getBrand()}">VALUE</p>
+
+<!--<a th:href="@{/econom/{id}/edit(id=${econom.getId()})}">Изменить</a>-->
+<form th:action="@{/comfort/{id}/edit(id=${comfort.getId()})}">
+    <input type="submit" value="Изменить"/>
+</form>
+<br/>
+<form th:method="DELETE" th:action="@{/comfort/{id}(id=${comfort.getId()})}">
+    <input type="submit" value="Удалить"/>
+</form>
+</body>
+</html>

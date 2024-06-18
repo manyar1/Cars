@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All cars</title>
+</head>
+<body>
+
+<style>
+    div {width: 60%;}
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 5%;
+        color: black;
+        text-decoration-color: orange;
+        font-family: "Arial Black";
+      }
+</style>
+
+<a href="index. html" th:href="@{/econom/index}" class="btn btn-large btn-success">Эконом</a>
+<a href="index.html" th:href="@{/comfort/index}" class="btn btn-large btn-success">Комфорт</a>
+<a href="index.html" th:href="@{/comfortPlus/index}" class="btn btn-large btn-success">Комфорт +</a>
+<a href="index.html" th:href="@{/business/index}" class="btn btn-large btn-success">Бизнес</a>
+<a href="index.html" th:href="@{/luxury/index}" class="btn btn-large btn-success">Люкс</a>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<style>
+    div {width: 60%;}
+    a {
+        display: block;
+        text-align: left;
+        margin-top: 0.5%;
+        color: black;
+        text-decoration-color: orange;
+        font-family: "Arial Black";
+    }
+</style>
+
+<div th:each="econom : ${econom}">
+
+    <a th:href="@{/econom/{id}(id=${econom.getId()})}"
+       th:text="${econom.getBrand()}">econom</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="new.html" th:href="@{/econom/new}" class="btn btn-large btn-success">Добавить автомобиль</a>
+<br/>
+<a href="index.html" th:href="@{/cars/all}" class="btn btn-large btn-success">
+    Вернуться на начальный экран</a>
+
+</body>
+</html>
